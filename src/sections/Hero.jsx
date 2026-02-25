@@ -103,10 +103,10 @@ export const Hero = () => {
                                 </span>
                             </h1>
                             <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                                Hi, I'm Neil Patrick Morano - a web developer
-                                specializing in React, Next.js, and TypeScript.
-                                I build scalable, performant web applications
-                                that users love.
+                                Hi, I'm Neil Patrick Morano - an aspiring
+                                front-end developer. I’m currently learning
+                                React and building responsive projects as I
+                                transition from Sales Ops and data-focused work.
                             </p>
                         </div>
 
@@ -179,7 +179,7 @@ export const Hero = () => {
                         <div className="flex animate-marquee">
                             {[...skills, ...skills].map((skill, i) => (
                                 <div key={i} className="shrink-0 px-8 py-4">
-                                    <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground cursor-default transition-colors">
+                                    <span className="text-xl italic font-semibold text-muted-foreground/50 hover:text-muted-foreground cursor-default transition-colors">
                                         {skill}
                                     </span>
                                 </div>

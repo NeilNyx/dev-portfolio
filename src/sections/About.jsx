@@ -1,28 +1,29 @@
-import { Code2, Rocket, Users, Lightbulb } from "lucide-react";
+import { Code2, Layers, CheckCircle2, Repeat2 } from "lucide-react";
 
 const highlights = [
     {
         icon: Code2,
-        title: "Clean Code",
+        title: "Front-End Focus",
         description:
-            "Writing maintainable, scalable code that stands the test of time.",
+            "Currently focused on React and modern UI—building responsive layouts and reusable components.",
     },
     {
-        icon: Rocket,
-        title: "Performance",
+        icon: Layers,
+        title: "Full-Stack Background",
         description:
-            "Optimizing for speed and delivering lightning-fast user experiences.",
+            "Built full-stack projects in college (PHP/Laravel), and I’m rebuilding toward that level again—stronger this time.",
     },
     {
-        icon: Users,
-        title: "Collaboration",
-        description: "Working closely with teams to bring ideas to life.",
+        icon: CheckCircle2,
+        title: "Accuracy First",
+        description:
+            "From SAP and ops work to coding—detail matters. I keep outputs clean, predictable, and reliable.",
     },
     {
-        icon: Lightbulb,
-        title: "Innovation",
+        icon: Repeat2,
+        title: "Continuous Improvement",
         description:
-            "Staying ahead with the latest technologies and best practices.",
+            "I learn fast through iteration: build, get feedback, refactor, and polish.",
     },
 ];
 
@@ -49,39 +50,41 @@ export const About = () => {
 
                         <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
                             <p>
-                                I'm a passionate software engineer with over 5
-                                years of experience crafting digital products
-                                that make a difference. My journey started with
-                                a curiosity for how things work on the web, and
-                                it has evolved into a deep expertise in modern
-                                frontend technologies.
+                                A BSIT graduate and a returning web developer.
+                                During college, I worked as the full-stack
+                                developer on team projects, which is where I
+                                first fell in love with building for the web.
                             </p>
                             <p>
-                                I specialize in React, Next.js, and TypeScript,
-                                building everything from sleek landing pages to
-                                complex enterprise applications. My approach
-                                combines technical excellence with a keen eye
-                                for design and user experience.
+                                After graduating, I landed in admin and
+                                data-focused roles—from data entry to sales
+                                operations—where I handled accuracy-heavy tasks,
+                                monitored performance, and worked with
+                                structured processes (including SAP). That
+                                experience sharpened my attention to detail and
+                                discipline, but web development has always been
+                                the path I wanted to pursue.
                             </p>
                             <p>
-                                When I'm not coding, you'll find me exploring
-                                new technologies, contributing to open-source
-                                projects, or sharing knowledge with the
-                                developer community.
+                                Now I’m actively rebuilding my momentum by
+                                focusing on React and shipping projects
+                                consistently. I’m aiming for a Junior Frontend /
+                                Web Developer role where I can contribute, learn
+                                fast, and grow into the career I’ve always
+                                wanted.
                             </p>
                         </div>
 
                         <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
                             <p className="text-lg font-medium italic text-foreground">
-                                "My mission is to create digital experiences
-                                that are not just functional, but truly
-                                delightful — products that users love to use and
-                                developers love to maintain."
+                                “My mission is to build clean, reliable web apps
+                                — experiences users can trust, and code that
+                                stays readable, scalable, and easy to improve.”
                             </p>
                         </div>
                     </div>
 
-                    {/* Right Column - Hilights */}
+                    {/* Right Column - Highlights */}
                     <div className="grid sm:grid-cols-2 gap-6">
                         {highlights.map((item, idx) => (
                             <div
