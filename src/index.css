@@ -1,13 +1,13 @@
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
-/* ── Dark theme ── */
+/* ── Themes ── */
 :root {
     --bg: #0d0d0d;
     --fg: #ccd6f6;
     --card: #141414;
-    --primary: #00ff00; /* pure electric green */
-    --primary-fg: #000000; /* pure black — best contrast on #00ff00 */
+    --primary: #00ff00;
+    --primary-fg: #000000;
     --secondary: #1a1a1a;
     --secondary-fg: #86efac;
     --muted: #1f1f1f;
@@ -16,23 +16,23 @@
     --highlight: #00ffcc;
     --surface: #111111;
 }
-/* ── Light theme ── */
+
 html.light {
-    --bg: #e8fdf0; /* soft mint */
-    --fg: #0a0a0a; /* near-black — sharp on mint */
-    --card: #f4fef8; /* lighter mint for cards */
-    --primary: #00b300; /* deep electric green */
+    --bg: #e8fdf0;
+    --fg: #0a0a0a;
+    --card: #f4fef8;
+    --primary: #00b300;
     --primary-fg: #ffffff;
-    --secondary: #d0f5e3; /* slightly deeper mint for sections */
-    --secondary-fg: #006600; /* dark green labels */
+    --secondary: #d0f5e3;
+    --secondary-fg: #006600;
     --muted: #c8f0dc;
-    --muted-fg: #2d6e4e; /* muted forest green */
-    --border: #a8e6c4; /* soft mint border */
-    --highlight: #00ccaa; /* teal complement */
-    --surface: #dffaec; /* sits between bg and card */
+    --muted-fg: #2d6e4e;
+    --border: #a8e6c4;
+    --highlight: #00ccaa;
+    --surface: #dffaec;
 }
 
-/* ── Tell Tailwind to reference CSS vars (enables dynamic theming) ── */
+/* ── Tailwind Theme Bridge ── */
 @theme inline {
     --color-background: var(--bg);
     --color-foreground: var(--fg);
@@ -49,6 +49,7 @@ html.light {
     --radius: 0.85rem;
 }
 
+/* ── Base ── */
 @layer base {
     html {
         scroll-behavior: smooth;
@@ -61,13 +62,19 @@ html.light {
     }
 }
 
+/* ── Components ── */
 @layer components {
     .font-code {
         font-family: "Fira Code", monospace;
         font-feature-settings:
             "liga" 1,
-            "calt" 1; /* enables ligatures */
+            "calt" 1;
     }
+
+    .font-serif {
+        font-family: "Playfair Display", serif;
+    }
+
     .glass {
         background-color: color-mix(
             in srgb,
@@ -90,9 +97,6 @@ html.light {
         box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
     }
 
-    .font-serif {
-        font-family: "Playfair Display", serif;
-    }
     .glow-text {
         text-shadow: 0 0 30px
             color-mix(in srgb, var(--color-primary) 60%, transparent);
@@ -104,8 +108,20 @@ html.light {
             inset 0 0 20px
                 color-mix(in srgb, var(--color-primary) 8%, transparent);
     }
+
+    .animated-border:hover {
+        background-color: color-mix(
+            in srgb,
+            var(--color-primary) 15%,
+            transparent
+        );
+        backdrop-filter: blur(16px);
+        box-shadow: 0 0 20px
+            color-mix(in srgb, var(--color-primary) 20%, transparent);
+    }
 }
 
+/* ── Keyframes ── */
 @layer utilities {
     @keyframes fade-in {
         from {
@@ -135,6 +151,7 @@ html.light {
             transform: translate(30px, 10px);
         }
     }
+
     @keyframes float {
         0%,
         100% {
@@ -146,11 +163,11 @@ html.light {
     }
 
     @keyframes marquee {
-        0% {
+        from {
             transform: translateX(0);
         }
-        100% {
-            transform: translateX(-50%);
+        to {
+            transform: translateX(-33.333%);
         }
     }
 
@@ -164,77 +181,65 @@ html.light {
         }
     }
 
-    .animate-blink {
-        animation: blink 1s step-start infinite;
+    @keyframes animated-border {
+        from {
+            stroke-dashoffset: 0;
+        }
+        to {
+            stroke-dashoffset: -600;
+        }
     }
 
+    /* ── Animations ── */
     .animate-fade-in {
         animation: fade-in 0.4s ease-in both;
     }
-
     .animate-float {
         animation: float 4s ease-in-out infinite;
     }
-
+    .animate-blink {
+        animation: blink 1s step-start infinite;
+    }
     .animate-marquee {
         animation: marquee 30s linear infinite;
     }
 
+    @media (max-width: 767px) {
+        .animate-marquee {
+            animation-duration: 10s;
+        }
+    }
+
+    /* ── Animation Delays ── */
     .animation-delay-100 {
         animation-delay: 100ms;
     }
-
     .animation-delay-200 {
         animation-delay: 200ms;
     }
-
     .animation-delay-300 {
         animation-delay: 300ms;
     }
-
     .animation-delay-400 {
         animation-delay: 400ms;
     }
-
     .animation-delay-500 {
         animation-delay: 500ms;
     }
-
     .animation-delay-600 {
         animation-delay: 600ms;
     }
-
     .animation-delay-800 {
         animation-delay: 800ms;
     }
 
-    .animated-border:hover {
-        background-color: color-mix(
-            in srgb,
-            var(--color-primary) 15%,
-            transparent
-        );
-        backdrop-filter: blur(16px);
-        box-shadow: 0 0 20px
-            color-mix(in srgb, var(--color-primary) 20%, transparent);
-    }
-
-    @keyframes animated-border {
-        0% {
-            stroke-dashoffset: 400;
-        }
-        100% {
-            stroke-dashoffset: -550;
-        }
-    }
-
+    /* ── Animated Border ── */
     @media (max-width: 767px) {
         .animated-border-path {
             animation: animated-border 1.5s linear infinite;
         }
     }
 
-    /* Desktop — hover only */
     @media (min-width: 768px) {
         .group:hover .animated-border-path {
             animation: animated-border 0.5s linear infinite;

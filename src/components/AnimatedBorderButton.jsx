@@ -12,7 +12,7 @@ export const AnimatedBorderButton = ({ children, ...prop }) => {
         animated-border cursor-pointer"
         >
             <svg
-                className="absolute left-0 top-0 w-full h-full pointer-events-none download-cv-border"
+                className="absolute left-0 top-0 w-full h-full pointer-events-none"
                 viewBox="0 0 200 60"
                 preserveAspectRatio="none"
                 style={{ overflow: "visible" }}
@@ -22,8 +22,7 @@ export const AnimatedBorderButton = ({ children, ...prop }) => {
                     fill="none"
                     stroke="var(--color-primary)"
                     strokeWidth="2"
-                    strokeDasharray="400 550"
-                    strokeDashoffset="400"
+                    strokeDasharray="60 540"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     className="animated-border-path"

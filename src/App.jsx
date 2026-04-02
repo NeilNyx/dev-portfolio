@@ -7,6 +7,7 @@ import { Testimonials } from "@/sections/Testimonials";
 import { Contact } from "@/sections/Contact";
 import { Footer } from "./layout/Footer";
 import { ThemeProvider } from "@/context/ThemeProvider";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                 </main>
                 <Footer />
             </div>
+            <ScrollToTop />
         </ThemeProvider>
     );
 }

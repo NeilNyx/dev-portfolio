@@ -181,14 +181,19 @@ export const Hero = () => {
                         Technologies I work with
                     </p>
                     <div className="relative overflow-hidden">
-                        <div className="flex animate-marquee">
-                            {[...skills, ...skills].map((skill, i) => (
-                                <div key={i} className="shrink-0 px-8 py-4">
-                                    <span className="text-xl italic font-semibold text-muted-foreground/50 hover:text-primary cursor-default transition-colors">
-                                        {skill}
-                                    </span>
-                                </div>
-                            ))}
+                        <div className="flex animate-marquee whitespace-nowrap">
+                            {[...skills, ...skills, ...skills].map(
+                                (skill, i) => (
+                                    <div
+                                        key={i}
+                                        className="shrink-0 px-4 sm:px-8 py-4"
+                                    >
+                                        <span className="text-base sm:text-xl italic font-semibold text-muted-foreground/50 hover:text-primary cursor-default transition-colors">
+                                            {skill}
+                                        </span>
+                                    </div>
+                                ),
+                            )}
                         </div>
                     </div>
                 </div>
