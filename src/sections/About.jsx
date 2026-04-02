@@ -50,36 +50,45 @@ export const About = () => {
 
                         <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
                             <p>
-                                A BSIT graduate and a returning web developer.
-                                During college, I worked as the full-stack
-                                developer on team projects, which is where I
-                                first fell in love with building for the web.
+                                I’m a BSIT graduate (2022) currently focused on
+                                frontend development, specializing in React,
+                                with the long-term goal of becoming a full-stack
+                                developer.
                             </p>
                             <p>
-                                After graduating, I landed in admin and
-                                data-focused roles—from data entry to sales
-                                operations—where I handled accuracy-heavy tasks,
-                                monitored performance, and worked with
-                                structured processes (including SAP). That
-                                experience sharpened my attention to detail and
-                                discipline, but web development has always been
-                                the path I wanted to pursue.
+                                I started my career in admin and data-focused
+                                roles—from an office assistant to sales
+                                operations—where I developed strong attention to
+                                detail, consistency, and experience working with
+                                structured systems like SAP. While that path
+                                strengthened my discipline, I’ve since shifted
+                                my focus back to web development.
                             </p>
                             <p>
-                                Now I’m actively rebuilding my momentum by
-                                focusing on React and shipping projects
-                                consistently. I’m aiming for a Junior Frontend /
-                                Web Developer role where I can contribute, learn
-                                fast, and grow into the career I’ve always
-                                wanted.
+                                Right now, I’m actively building and deploying
+                                projects, improving my frontend skills, and
+                                working with modern tools like React Query to
+                                handle real-world data and state management. At
+                                the same time, I’m gradually expanding my
+                                backend knowledge to move toward full-stack
+                                development.
+                            </p>
+                            <p>
+                                I’m aiming for a Junior Frontend / Web Developer
+                                role where I can contribute, learn quickly, and
+                                grow into a well-rounded full-stack developer.
                             </p>
                         </div>
 
                         <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
                             <p className="text-lg font-medium italic text-foreground">
-                                “My mission is to build clean, reliable web apps
-                                — experiences users can trust, and code that
-                                stays readable, scalable, and easy to improve.”
+                                “I build web experiences that are both
+                                functional and elegant — interfaces users can
+                                navigate intuitively, code I can maintain and
+                                scale, and projects that grow with every
+                                iteration. Every component I create is a step
+                                toward becoming a versatile full-stack
+                                developer.”
                             </p>
                         </div>
                     </div>
